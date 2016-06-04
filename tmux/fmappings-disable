@@ -1,0 +1,29 @@
+## Undo F mappings 
+# Hyper usefull when using htop 
+
+unbind-key -n F2 
+unbind-key -n C-F2 
+unbind-key -n S-F2 
+unbind-key -n F3 
+unbind-key -n F4 
+unbind-key -n M-Left 
+unbind-key -n M-Right 
+unbind-key -n S-Up 
+unbind-key -n S-Down 
+unbind-key -n S-Left 
+unbind-key -n S-Right 
+unbind-key -n M-S-Up 
+unbind-key -n M-S-Down 
+unbind-key -n M-S-Left 
+unbind-key -n M-S-Right 
+unbind-key -n F5 
+unbind-key -n F6 
+unbind-key -n F7 
+unbind-key -n F8 
+unbind-key -n S-F8 
+unbind-key -n F9 
+unbind-key -n C-F9 
+#unbind-key -n S-F9 
+
+# Use F12 to desactivate / activate  tmux F-keys
+bind-key -n F12 source ${HOME}/.tmux/fmappings \; display-message "Byobu F-keys: ENABLED"

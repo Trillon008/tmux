@@ -1,0 +1,44 @@
+Tmux Mappings Help 
+--------------------
+  C = Control
+  S = Shift 
+  M = Alt
+
+  F1            -- utilise par l'OS --
+    S+F1        Affiche l'aide
+
+  F2            Nouvelle fenetre
+    S+F2        split horizontal  
+    C+F2        split vertical
+
+  F3            fenetre suivante
+
+  F4            fenetre precedente
+
+  Shift
+    S+Up        deplacer vers le pane du haut
+    S+Down      deplacer vers le pane du bas
+    S+Left      deplacer vers le pane de gauche
+    S+Right     deplacer vers le pane de droite
+
+  Shift+Alt
+    S+M+Up      redimensionner les panes 
+    S+M+Down    redimensionner les panes
+    S+M+Left    redimensionner les panes
+    S+M+Right   redimensionner les panes
+
+  F5            renommer la fenetre
+
+  F6            zoom dans un pane
+
+  F7            passer en "copy-mode"
+
+  F8            changer le layout des panes
+
+  F9            detacher la session
+    S+F9        fermer
+
+  F10           -- utilise par X11 -- 
+  F11           -- utilise par X11 -- 
+
+  F12           On/Off le mapping des touches FX

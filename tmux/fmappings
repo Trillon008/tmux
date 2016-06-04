@@ -1,0 +1,50 @@
+## Tmux keys configuration ##
+
+# Helper
+bind-key -n S-F1 new-window -k -n help "/bin/bash -c 'less ${HOME}/.tmux/help.txt'"
+
+# Windows and Panes 
+bind-key -n F2 new-window \; rename-window "-"
+bind-key -n C-F2 display-panes \; split-window -h 
+bind-key -n S-F2 display-panes \; split-window -v 
+
+# Switching windows with F3 F4 or ALT-arrows
+bind-key -n F3 previous-window
+bind-key -n F4 next-window 
+bind-key -n M-Left previous-window
+bind-key -n M-Right next-window
+
+# Use Shift-arrows to move between panes 
+bind-key -n S-Up display-panes \; select-pane -U
+bind-key -n S-Down display-panes \; select-pane -D
+bind-key -n S-Left display-panes \; select-pane -L
+bind-key -n S-Right display-panes \; select-pane -R
+
+# Use Ctrl-Shift + arrows to resize panes
+bind-key -n M-S-Up resize-pane -U
+bind-key -n M-S-Down resize-pane -D
+bind-key -n M-S-Left resize-pane -L
+bind-key -n M-S-Right resize-pane -R
+
+# F5 rename a window 
+bind-key -n F5 command-prompt -p "(rename-window) " "rename-window '%%'"
+
+# F6 zoom in 
+bind-key -n F6 resize-pane -Z 
+
+# F7 Copy mode
+bind-key -n F7 copy-mode
+
+# F8 Change layout
+bind-key -n F8 next-layout
+bind-key -n S-F8 display-panes \; setw synchronize-panes
+
+
+# F9 to kill like kill -9 
+bind-key -n F9 detach
+bind-key -n C-F9 kill-pane
+# Usually I don't want to do this
+# bind-key -n S-F9 kill-window
+
+# Use F12 to desactivate / activate  tmux F-keys
+bind-key -n F12 source ${HOME}/.tmux/fmappings-disable \; display-message "Byobu F-keys: DISABLED"
